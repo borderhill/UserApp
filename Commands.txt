@@ -1,0 +1,9 @@
+- Running command line
+
+mvn spring-boot:run
+
+- Repackage
+
+mvn package spring-boot:repackage
+
+
