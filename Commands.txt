@@ -7,6 +7,5 @@ mvn package spring-boot:repackage
 
 mvn clean
 mvn package
-
 mvn compile
 
