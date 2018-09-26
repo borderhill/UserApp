@@ -6,4 +6,6 @@ mvn spring-boot:run
 
 mvn package spring-boot:repackage
 
+mvn clean
+mvn package
 
