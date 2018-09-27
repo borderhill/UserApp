@@ -5,12 +5,18 @@ import java.util.Arrays;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@ComponentScan({"com.sample.app","com.sample.controller","com.sample.service"})
+@ComponentScan({"com.sample.app","com.sample.controller","com.sample.service","com.sample.repository"})
+//@ComponentScan({"com.sample.app","com.sample.controller","com.sample.service","com.sample.repository","com.sample.data"})
+//@ComponentScan({"com.sample.app","com.sample.controller","com.sample.service","com.sample.data"})
 @SpringBootApplication
+@EnableJpaRepositories("com.sample.repository")
+@EntityScan("com.sample.data")
 public class Application {
 
     public static void main(String[] args) {

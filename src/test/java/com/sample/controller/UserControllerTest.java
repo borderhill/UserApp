@@ -44,14 +44,12 @@ public class UserControllerTest {
     @Test
     public void getUsers() throws Exception {
 		List<User> users = new ArrayList<User>();
-		User user1 = new User();
+		User user1 = new User("Ari", "Rajamaki");
 		user1.setId(1L);
-		user1.setName("ARI");
 		//users.add(user);
 		
-		User user2 = new User();
+		User user2 = new User("John", "Smith");
 		user2.setId(2L);
-		user2.setName("ARI2");
 		//users.add(user);		
 		when(userServiceMock.getUsers()).thenReturn(Arrays.asList(user1, user2));    	
     	

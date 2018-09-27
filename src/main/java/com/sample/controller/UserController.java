@@ -23,9 +23,11 @@ public class UserController {
 	@GetMapping(value = "/users")
 	@ResponseBody
 	public List<User> getUsers() {
-		List<User> users = new ArrayList<User>();
-		users.add(new User());
-		users.add(new User());		
+		
+		List<User> users = userService.getUsers();
+		//List<User> users = new ArrayList<User>();
+		//users.add(new User("Ari","Rajamaki"));
+		//users.add(new User("Ari2","Rajamaki"));		
 		return users;
 	}
 
@@ -33,7 +35,7 @@ public class UserController {
 	@ResponseBody
 	public User getUser(@PathVariable String id) {
 		User user = userService.getUser(new Long(id));
-		user = new User();
+		user = new User("Ari","Rajamaki");
 		user.setId(new Long(id));
 		return user;
 	}
