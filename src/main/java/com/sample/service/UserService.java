@@ -6,10 +6,15 @@ import com.sample.data.User;
 
 public interface UserService {
 
-	public List<User> getUsers();
+	public Boolean emailExists(String email);
+	public Boolean usernameExists(String username);
+	
+	public List<User> getUsers(String keyword, String email, String username);
 	
 	public User getUser(Long id);
 	
-	public User setUser(User userInfo);
+	public User createUser(User user);
+	public void deleteUser(Long id);
+	public User updateUser(User user);
 
 }

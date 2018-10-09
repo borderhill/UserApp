@@ -9,3 +9,4 @@ mvn clean
 mvn package
 mvn compile
 
+curl localhost:8080/users

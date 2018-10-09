@@ -51,7 +51,7 @@ public class UserControllerTest {
 		User user2 = new User("John", "Smith");
 		user2.setId(2L);
 		//users.add(user);		
-		when(userServiceMock.getUsers()).thenReturn(Arrays.asList(user1, user2));    	
+		when(userServiceMock.getUsers(null, null, null)).thenReturn(Arrays.asList(user1, user2));    	
     	
 		Object result = mvc.perform(MockMvcRequestBuilders.get("/users").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
